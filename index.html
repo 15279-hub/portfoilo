@@ -3,13 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Profile | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -18,133 +16,147 @@ font-family:'Kanit',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#FFE5F1,#FFF8FB);
+background:linear-gradient(135deg,#ffe6f2,#fff8fc);
+overflow-x:hidden;
+color:#444;
+}
+
+/* ดอกซากุระ */
+.sakura{
+position:fixed;
+top:-10%;
+font-size:25px;
+animation:fall linear infinite;
+opacity:.8;
+pointer-events:none;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-100px) rotate(0deg);
+}
+100%{
+transform:translateY(120vh) rotate(360deg);
+}
+}
+
+header{
+background:rgba(255,255,255,.75);
+backdrop-filter:blur(12px);
+padding:20px;
+text-align:center;
+position:sticky;
+top:0;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+header h1{
+color:#ff5b9f;
+font-size:36px;
 }
 
 nav{
-background:#ff8fbe;
-padding:18px;
-text-align:center;
+margin-top:15px;
 }
 
 nav a{
-color:white;
 text-decoration:none;
-margin:20px;
+color:#666;
+margin:0 18px;
 font-size:18px;
-font-weight:bold;
+font-weight:500;
+transition:.3s;
 }
 
 nav a:hover{
-color:#fff0f6;
+color:#ff5b9f;
 }
 
 .profile{
-width:80%;
-max-width:900px;
-margin:60px auto;
-background:white;
-padding:40px;
-border-radius:30px;
-box-shadow:0 10px 25px rgba(0,0,0,.1);
-display:flex;
-gap:40px;
-align-items:center;
+padding:60px 20px;
+text-align:center;
 }
 
 .profile img{
-width:250px;
-height:250px;
+width:260px;
+height:260px;
 border-radius:50%;
 object-fit:cover;
-border:8px solid #ffd4e8;
+border:8px solid white;
+box-shadow:0 15px 35px rgba(255,105,180,.3);
+transition:.4s;
 }
 
-.info h1{
-color:#ff4f94;
-font-size:40px;
-margin-bottom:15px;
+.profile img:hover{
+transform:scale(1.05);
 }
 
-.info p{
-font-size:18px;
-line-height:35px;
-color:#555;
+.profile h2{
+margin-top:25px;
+font-size:42px;
+color:#ff5b9f;
 }
 
-.skill{
-margin-top:20px;
-}
-
-.bar{
-background:#eee;
-height:15px;
-border-radius:20px;
-margin-bottom:15px;
-}
-
-.fill{
-height:15px;
-border-radius:20px;
-background:#ff6fa8;
-}
-
-footer{
-margin-top:50px;
-background:#ff8fbe;
-color:white;
-text-align:center;
-padding:20px;
-}
- .menu-box{
+.profile p{
+margin-top:10px;
+font-size:20px;
+color:#666;
+ .cards{
 max-width:1100px;
-margin:40px auto;
+margin:20px auto 70px;
 display:grid;
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:repeat(2,1fr);
 gap:25px;
+padding:0 20px;
 }
 
-.box{
+.card{
 background:white;
-padding:35px;
+padding:40px;
 border-radius:25px;
 text-align:center;
 text-decoration:none;
 color:#444;
-box-shadow:0 10px 25px rgba(255,105,180,.15);
+box-shadow:0 12px 25px rgba(255,105,180,.15);
 transition:.35s;
 }
 
-.box:hover{
+.card:hover{
 transform:translateY(-10px);
-background:#ffe6f1;
+background:#fff0f7;
 }
 
-.box{
-font-size:22px;
-}
-
-.box h3{
+.card h3{
+font-size:30px;
+color:#ff5b9f;
 margin:15px 0;
-color:#ff4f94;
 }
 
-.box p{
-font-size:16px;
+.card p{
+font-size:18px;
 }
 
-@media(max-width:900px){
-
-.menu-box{
-grid-template-columns:repeat(2,1fr);
+footer{
+background:#ff9cc6;
+padding:20px;
+text-align:center;
+color:white;
+font-size:18px;
 }
 
-}
+@media(max-width:768px){
 
-@media(max-width:600px){
-
-.menu-box{
+.cards{
 grid-template-columns:1fr;
+}
+
+.profile img{
+width:220px;
+height:220px;
+}
+
+.profile h2{
+font-size:34px;
 }
 
 }
@@ -155,85 +167,83 @@ grid-template-columns:1fr;
 
 <body>
 
+<span class="sakura" style="left:10%;animation-duration:8s;">🌸</span>
+<span class="sakura" style="left:25%;animation-duration:10s;">🌸</span>
+<span class="sakura" style="left:45%;animation-duration:7s;">🌸</span>
+<span class="sakura" style="left:60%;animation-duration:9s;">🌸</span>
+<span class="sakura" style="left:80%;animation-duration:11s;">🌸</span>
+
+<header>
+
+<h1>🌸 My Portfolio 🌸</h1>
+
 <nav>
 
-<a href="index.html">🏠 Home</a>
+<a href="index.html">Home</a>
 
-<a href="profile.html">👤 Profile</a>
+<a href="profile.html">Profile</a>
 
-<a href="education.html">🎓 Education</a>
+<a href="education.html">Education</a>
 
-<a href="award.html">🏆 Awards</a>
+<a href="award.html">Awards</a>
 
-<a href="contact.html">📞 Contact</a>
+<a href="contact.html">Contact</a>
 
 </nav>
 
-<div class="profile">
+</header>
 
-<img src="images/73A7F7EC-551A-4D91-9308-051B8C7B625E.jpeg">
- <div class="menu-box">
+<section class="profile">
 
-<a href="profile.html" class="box">
-👤
-<h3>Profile</h3>
+<img src="images/27959522-4022-4831-9837-B02212736410.jpeg" alt="Profile">
+
+<h2>อุบลวรรณ ประสานพวง</h2>
+
+<p>Senior High School Student</p>
+
+<br>
+
+<p>
+💖 ชื่อเล่น : แตงโม<br>
+🎂 อายุ : 17 ปี<br>
+🎈 เกิดวันที่ : 14 พฤษภาคม 2009<br>
+🏫 ชั้นมัธยมศึกษาปีที่ 6/1<br>
+📚 โรงเรียนพานทอง
+</p>
+
+</section>
+
+<section class="cards">
+
+<a href="profile.html" class="card">
+<h3>👤 Profile</h3>
 <p>ข้อมูลส่วนตัว</p>
 </a>
 
-<a href="education.html" class="box">
-🎓
-<h3>Education</h3>
+<a href="education.html" class="card">
+<h3>🎓 Education</h3>
 <p>ประวัติการศึกษา</p>
 </a>
 
-<a href="award.html" class="box">
-🏆
-<h3>Awards</h3>
+<a href="award.html" class="card">
+<h3>🏆 Awards</h3>
 <p>ผลงานและเกียรติบัตร</p>
 </a>
 
-<a href="contact.html" class="box">
-📞
-<h3>Contact</h3>
+<a href="contact.html" class="card">
+<h3>📞 Contact</h3>
 <p>ช่องทางการติดต่อ</p>
 </a>
 
-</div>
-
-<div class="info">
-
-<h1>อุบลวรรณ ประสานพวง</h1>
-
-<p>
-
-🌸 ชื่อเล่น : แตงโม<br>
-
-🎂 อายุ : 17 ปี<br>
-
-🎓 ชั้นมัธยมศึกษาปีที่ : 6/1<br>
-
-🏫 โรงเรียนพานทอง<br>
-
-💖 งานอดิเรก : ฟังเพลง ดูซีรีส์ ออกแบบกราฟิก<br>
-
-🎯 เป้าหมาย : ศึกษาต่อคณะพยาบาลศาสตร์
-
-
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+</section>
 
 <footer>
 
-💖 Thank you for visiting my Portfolio 💖
+© 2026 Ubonwan Prasanpuang | Portfolio
 
 </footer>
 
 </body>
 </html>
  
+}
