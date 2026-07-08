@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ประวัติส่วนตัว</title>
+<title>ประวัติส่วนตัว | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -18,83 +18,136 @@ font-family:'Kanit',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#ffe4ef,#fff8fc);
+background:linear-gradient(135deg,#FFF0F6,#FFE3EE);
+color:#444;
 }
 
-header{
-background:#ff8fbe;
-padding:20px;
+/* เมนู */
+nav{
+background:rgba(255,255,255,.8);
+backdrop-filter:blur(10px);
+padding:18px;
 text-align:center;
-color:white;
-font-size:35px;
-font-weight:bold;
-box-shadow:0 5px 15px rgba(0,0,0,.15);
+box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
+nav a{
+text-decoration:none;
+color:#666;
+margin:0 18px;
+font-size:17px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#FF4F94;
+}
+
+/* กล่องหลัก */
 .container{
 max-width:1000px;
-margin:50px auto;
+margin:60px auto;
+background:white;
+border-radius:30px;
+box-shadow:0 15px 35px rgba(255,105,180,.15);
+padding:50px;
 display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:40px;
+align-items:center;
+gap:50px;
+}
+
+/* รูป */
+.profile-image img{
+width:260px;
+height:260px;
+border-radius:25px;
+object-fit:cover;
+border:6px solid #FFD4E6;
+box-shadow:0 10px 25px rgba(255,105,180,.2);
+}
+
+/* ข้อมูล */
+.info h1{
+font-size:42px;
+color:#FF4F94;
+margin-bottom:10px;
+}
+
+.info h3{
+color:#999;
+font-weight:400;
+margin-bottom:30px;
+}
+
+.info p{
+font-size:18px;
+line-height:40px;
+}
+
+.label{
+font-weight:bold;
+color:#FF4F94;
+}
+
+/* กล่องด้านล่าง */
+.cards{
+max-width:1000px;
+margin:30px auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
 }
 
 .card{
 background:white;
 padding:30px;
-border-radius:30px;
-box-shadow:0 10px 30px rgba(255,105,180,.2);
-width:350px;
+border-radius:20px;
 text-align:center;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+transition:.3s;
 }
 
-.card img{
-width:220px;
-height:220px;
-border-radius:50%;
-object-fit:cover;
-border:8px solid #ffd6e8;
-margin-bottom:20px;
+.card:hover{
+transform:translateY(-8px);
 }
 
 .card h2{
-color:#ff4f94;
-margin-bottom:20px;
+font-size:35px;
+margin-bottom:15px;
 }
 
-.info{
-background:white;
-padding:35px;
-border-radius:30px;
-box-shadow:0 10px 30px rgba(255,105,180,.2);
-width:500px;
+.card h3{
+color:#FF4F94;
+margin-bottom:10px;
 }
 
-.info h1{
-color:#ff4f94;
-margin-bottom:20px;
-}
-
-.info p{
-font-size:20px;
-line-height:45px;
-color:#555;
-}
-
-.anime{
-font-size:55px;
-text-align:center;
-margin-top:20px;
-}
-
+/* Footer */
 footer{
-margin-top:40px;
-background:#ff8fbe;
+margin-top:50px;
+background:#FF9CC4;
 padding:20px;
 text-align:center;
 color:white;
-font-size:18px;
+}
+
+/* มือถือ */
+@media(max-width:768px){
+
+.container{
+flex-direction:column;
+text-align:center;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.profile-image img{
+width:220px;
+height:220px;
+}
+
 }
 
 </style>
@@ -103,61 +156,43 @@ font-size:18px;
 
 <body>
 
-<header>
-🌸 ประวัติส่วนตัว 🌸
-</header>
+<nav>
 
-<div class="anime">
-🌸 ✨ 🎀 💖 🌸
-</div>
+<a href="index.html">Home</a>
+<a href="profile.html">Profile</a>
+<a href="education.html">Education</a>
+<a href="award.html">Awards</a>
+<a href="contact.html">Contact</a>
+
+</nav>
 
 <div class="container">
 
-<div class="card">
+<div class="profile-image">
 
-<img src="images/27959522-4022-4831-9837-B02212736410.jpeg" alt="Profile">
-
-<h2>อุบลวรรณ ประสานพวง</h2>
-
-<p>💗<img src="images/27959522-4022-4831-9837-B02212736410.jpeg" alt="Profile">  💗</p>
+<img src="images/profile.jpg" alt="รูปโปรไฟล์">
 
 </div>
 
 <div class="info">
 
-<h1>👤 ประวัติส่วนตัว</h1>
+<h1>อุบลวรรณ ประสานพวง</h1>
+
+<h3>Senior High School Student</h3>
 
 <p>
 
-💖 <b>ชื่อ :</b> อุบลวรรณ ประสานพวง
+<span class="label">ชื่อ :</span> อุบลวรรณ ประสานพวง<br>
 
-<br>
+<span class="label">ชื่อเล่น :</span> แตงโม<br>
 
-🌸 <b>ชื่อเล่น :</b> แตงโม
+<span class="label">อายุ :</span> 17 ปี<br>
 
-<br>
+<span class="label">วันเกิด :</span> 14 พฤษภาคม 2009<br>
 
-🎂 <b>อายุ :</b> 17 ปี
+<span class="label">กำลังศึกษา :</span> ชั้นมัธยมศึกษาปีที่ 6/1<br>
 
-<br>
-
-🎈 <b>วันเกิด :</b> 14 พฤษภาคม 2009
-
-<br>
-
-🏫 <b>กำลังศึกษา :</b> ชั้นมัธยมศึกษาปีที่ 6/1
-
-<br>
-
-📚 <b>โรงเรียน :</b> โรงเรียนพานทอง
-
-<br>
-
-💗 <b>งานอดิเรก :</b> ฟังเพลง ดูซีรีส์ ออกแบบกราฟิก
-
-<br>
-
-🎯 <b>เป้าหมาย :</b> ศึกษาต่อระดับมหาวิทยาลัย และพัฒนาตนเองอยู่เสมอ
+<span class="label">โรงเรียน :</span> โรงเรียนพานทอง
 
 </p>
 
@@ -165,9 +200,43 @@ font-size:18px;
 
 </div>
 
+<div class="cards">
+
+<div class="card">
+
+<h2>🎯</h2>
+
+<h3>เป้าหมาย</h3>
+
+<p>พัฒนาตนเองอย่างต่อเนื่อง และเตรียมความพร้อมเพื่อศึกษาต่อในระดับมหาวิทยาลัย</p>
+
+</div>
+
+<div class="card">
+
+<h2>💖</h2>
+
+<h3>งานอดิเรก</h3>
+
+<p>ฟังเพลง ดูซีรีส์ อ่านหนังสือ และออกแบบกราฟิก</p>
+
+</div>
+
+<div class="card">
+
+<h2>✨</h2>
+
+<h3>คติประจำใจ</h3>
+
+<p>"Success begins with believing in yourself."</p>
+
+</div>
+
+</div>
+
 <footer>
 
-🌸 Thank you for visiting my profile 🌸
+© 2026 Portfolio | Ubonwan Prasanpuang
 
 </footer>
 
