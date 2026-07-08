@@ -101,23 +101,21 @@ color:#ff5b9f;
 margin-top:10px;
 font-size:20px;
 color:#666;
- .cards{
-max-width:1100px;
-margin:20px auto 70px;
+.cards{
+max-width:900px;
+margin:40px auto 70px;
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:25px;
+gap:30px;
 padding:0 20px;
 }
 
 .card{
 background:white;
-padding:40px;
 border-radius:25px;
+padding:45px 20px;
 text-align:center;
-text-decoration:none;
-color:#444;
-box-shadow:0 12px 25px rgba(255,105,180,.15);
+box-shadow:0 10px 25px rgba(255,105,180,.18);
 transition:.35s;
 }
 
@@ -126,40 +124,27 @@ transform:translateY(-10px);
 background:#fff0f7;
 }
 
-.card h3{
-font-size:30px;
+.card a{
+text-decoration:none;
+color:#444;
+}
+
+.icon{
+font-size:60px;
+margin-bottom:15px;
+}
+
+.card h2{
 color:#ff5b9f;
-margin:15px 0;
-}
-
-.card p{
-font-size:18px;
-}
-
-footer{
-background:#ff9cc6;
-padding:20px;
-text-align:center;
-color:white;
-font-size:18px;
+font-size:28px;
 }
 
 @media(max-width:768px){
-
 .cards{
 grid-template-columns:1fr;
 }
-
-.profile img{
-width:220px;
-height:220px;
 }
 
-.profile h2{
-font-size:34px;
-}
-
-}
 
 </style>
 
@@ -188,6 +173,37 @@ font-size:34px;
 <a href="award.html">Awards</a>
 
 <a href="contact.html">Contact</a>
+ <section class="cards">
+
+<div class="card">
+<a href="profile.html">
+<div class="icon">👤</div>
+<h2>Profile</h2>
+</a>
+</div>
+
+<div class="card">
+<a href="education.html">
+<div class="icon">🎓</div>
+<h2>Education</h2>
+</a>
+</div>
+
+<div class="card">
+<a href="award.html">
+<div class="icon">🏆</div>
+<h2>Awards</h2>
+</a>
+</div>
+
+<div class="card">
+<a href="contact.html">
+<div class="icon">📞</div>
+<h2>Contact</h2>
+</a>
+</div>
+
+</section>
 
 </nav>
 
@@ -213,29 +229,7 @@ font-size:34px;
 
 </section>
 
-<section class="cards">
 
-<a href="profile.html" class="card">
-<h3>👤 Profile</h3>
-<p>ข้อมูลส่วนตัว</p>
-</a>
-
-<a href="education.html" class="card">
-<h3>🎓 Education</h3>
-<p>ประวัติการศึกษา</p>
-</a>
-
-<a href="award.html" class="card">
-<h3>🏆 Awards</h3>
-<p>ผลงานและเกียรติบัตร</p>
-</a>
-
-<a href="contact.html" class="card">
-<h3>📞 Contact</h3>
-<p>ช่องทางการติดต่อ</p>
-</a>
-
-</section>
 
 <footer>
 
