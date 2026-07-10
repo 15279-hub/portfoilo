@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Awards | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Kanit',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#FFE8F3,#FFF8FC);
+overflow-x:hidden;
+}
+
+/* ซากุระ */
+
+.sakura{
+position:fixed;
+top:-10%;
+font-size:28px;
+pointer-events:none;
+animation:fall linear infinite;
+opacity:.9;
+}
+
+.s1{left:5%;animation-duration:8s;}
+.s2{left:20%;animation-duration:10s;}
+.s3{left:35%;animation-duration:7s;}
+.s4{left:50%;animation-duration:9s;}
+.s5{left:65%;animation-duration:11s;}
+.s6{left:80%;animation-duration:8s;}
+.s7{left:95%;animation-duration:10s;}
+
+@keyframes fall{
+0%{
+transform:translateY(-100px) rotate(0deg);
+}
+100%{
+transform:translateY(110vh) rotate(360deg);
+}
+}
+
+/* เมนู */
+
+nav{
+background:white;
+padding:18px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+nav a{
+text-decoration:none;
+margin:0 18px;
+color:#666;
+font-size:18px;
+font-weight:500;
+}
+
+nav a:hover{
+color:#ff4f94;
+}
+
+/* หัวข้อ */
+
+.title{
+text-align:center;
+margin:50px 20px;
+}
+
+.title h1{
+font-size:48px;
+color:#ff4f94;
+}
+
+.title p{
+color:#777;
+font-size:18px;
+margin-top:10px;
+}
+
+/* Gallery */
+
+.gallery{
+
+max-width:1100px;
+margin:auto;
+padding:20px;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+
+}
+
+.card{
+
+background:white;
+padding:20px;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(255,105,180,.18);
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card img{
+
+width:100%;
+height:230px;
+object-fit:cover;
+border-radius:15px;
+background:#ffe6f1;
+
+}
+
+.card h2{
+
+margin-top:18px;
+color:#ff4f94;
+
+}
+
+.card p{
+
+margin-top:10px;
+color:#666;
+line-height:28px;
+
+}
+
+footer{
+
+margin-top:60px;
+background:#ff9cc4;
+color:white;
+padding:20px;
+text-align:center;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<span class="sakura s1">🌸</span>
+<span class="sakura s2">🌸</span>
+<span class="sakura s3">🌸</span>
+<span class="sakura s4">🌸</span>
+<span class="sakura s5">🌸</span>
+<span class="sakura s6
