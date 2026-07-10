@@ -1,1 +1,193 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Portfolio</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Kanit',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#FFE8F3,#FFF8FC);
+overflow-x:hidden;
+}
+
+/* ซากุระ */
+
+.sakura{
+position:fixed;
+top:-10%;
+font-size:28px;
+pointer-events:none;
+animation:fall linear infinite;
+opacity:.9;
+}
+
+.s1{left:8%;animation-duration:8s;}
+.s2{left:25%;animation-duration:10s;}
+.s3{left:42%;animation-duration:7s;}
+.s4{left:58%;animation-duration:9s;}
+.s5{left:75%;animation-duration:11s;}
+.s6{left:92%;animation-duration:8s;}
+
+@keyframes fall{
+0%{transform:translateY(-100px) rotate(0deg);}
+100%{transform:translateY(110vh) rotate(360deg);}
+}
+
+/* เมนู */
+
+nav{
+background:white;
+padding:18px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+nav a{
+text-decoration:none;
+margin:0 18px;
+font-size:18px;
+color:#666;
+font-weight:500;
+}
+
+nav a:hover{
+color:#ff4f94;
+}
+
+/* เนื้อหา */
+
+.container{
+max-width:900px;
+margin:50px auto;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:40px;
+border-radius:30px;
+text-align:center;
+box-shadow:0 10px 30px rgba(255,105,180,.18);
+}
+
+.card img{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid #FFD6E8;
+}
+
+.card h1{
+margin-top:20px;
+color:#ff4f94;
+}
+
+.contact{
+margin-top:30px;
+display:grid;
+grid-template-columns:1fr;
+gap:20px;
+}
+
+.item{
+background:#FFF0F7;
+padding:20px;
+border-radius:20px;
+font-size:18px;
+}
+
+.item a{
+color:#ff4f94;
+font-weight:bold;
+text-decoration:none;
+}
+
+.item a:hover{
+text-decoration:underline;
+}
+
+footer{
+margin-top:50px;
+background:#ff9cc4;
+padding:20px;
+text-align:center;
+color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<span class="sakura s1">🌸</span>
+<span class="sakura s2">🌸</span>
+<span class="sakura s3">🌸</span>
+<span class="sakura s4">🌸</span>
+<span class="sakura s5">🌸</span>
+<span class="sakura s6">🌸</span>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="profile.html">Profile</a>
+<a href="education.html">Education</a>
+<a href="award.html">Awards</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<div class="container">
+
+<div class="card">
+
+<img src="images/73A7F7EC-551A-4D91-9308-051B8C7B625E.jpeg" alt="Profile">
+
+<h1>อุบลวรรณ ประสานพวง</h1>
+
+<p style="margin-top:10px;color:#777;">
+สามารถติดต่อฉันได้ผ่านช่องทางด้านล่าง
+</p>
+
+<div class="contact">
+
+<div class="item">
+📷 Instagram<br><br>
+<a href="https://www.instagram.com/taengmo_.14" target="_blank">
+@taengmo_.14
+</a>
+</div>
+
+<div class="item">
+📧 Email<br><br>
+<a href="mailto:ubonwankimm09@gmail.com">
+ubonwankimm09@gmail.com
+</a>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+💖 Thank you for visiting my Portfolio 💖
+
+</footer>
+
+</body>
+</html>
