@@ -18,7 +18,7 @@ font-family:'Kanit',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#FFEAF4,#FFF8FC,#FFE3F1);
+background:linear-gradient(135deg,#FFEAF4,#FFF8FC);
 overflow-x:hidden;
 }
 
@@ -27,28 +27,30 @@ overflow-x:hidden;
 .sakura{
 position:fixed;
 top:-10%;
-font-size:28px;
+font-size:26px;
 pointer-events:none;
 animation:fall linear infinite;
-opacity:.9;
-z-index:999;
+opacity:.8;
 }
 
 .s1{left:5%;animation-duration:8s;}
-.s2{left:18%;animation-duration:11s;}
-.s3{left:35%;animation-duration:7s;}
-.s4{left:50%;animation-duration:9s;}
-.s5{left:67%;animation-duration:10s;}
+.s2{left:18%;animation-duration:10s;}
+.s3{left:35%;animation-duration:9s;}
+.s4{left:52%;animation-duration:7s;}
+.s5{left:68%;animation-duration:11s;}
 .s6{left:82%;animation-duration:8s;}
-.s7{left:95%;animation-duration:12s;}
+.s7{left:95%;animation-duration:10s;}
 
 @keyframes fall{
+
 0%{
-transform:translateY(-120px) rotate(0deg);
+transform:translateY(-100px) rotate(0deg);
 }
+
 100%{
 transform:translateY(110vh) rotate(360deg);
 }
+
 }
 
 /* เมนู */
@@ -57,17 +59,14 @@ nav{
 background:white;
 padding:18px;
 text-align:center;
-box-shadow:0 5px 18px rgba(0,0,0,.08);
-position:sticky;
-top:0;
-z-index:1000;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
 nav a{
 text-decoration:none;
 margin:0 18px;
 font-size:18px;
-font-weight:500;
+font-weight:600;
 color:#666;
 transition:.3s;
 }
@@ -80,25 +79,25 @@ color:#ff4f94;
 
 .title{
 text-align:center;
-padding:60px 20px 30px;
+margin:50px 20px;
 }
 
 .title h1{
-font-size:55px;
+font-size:50px;
 color:#ff4f94;
-margin-bottom:15px;
 }
 
 .title p{
 font-size:20px;
-color:#777;
+color:#666;
+margin-top:10px;
 }
 
 .line{
 width:120px;
 height:5px;
-background:#ff7db5;
-margin:25px auto;
+background:#ff77b4;
+margin:18px auto;
 border-radius:20px;
 }
 
@@ -109,71 +108,52 @@ max-width:1200px;
 margin:auto;
 padding:20px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:35px;
+grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+gap:30px;
 }
 
 /* Card */
 
 .card{
 background:white;
-border-radius:30px;
+border-radius:25px;
 overflow:hidden;
-box-shadow:0 15px 35px rgba(255,105,180,.18);
-transition:.4s;
-position:relative;
+box-shadow:0 10px 25px rgba(255,105,180,.18);
+transition:.35s;
 }
 
 .card:hover{
-transform:translateY(-10px) scale(1.02);
-box-shadow:0 20px 40px rgba(255,105,180,.3);
-}
-
-.card::before{
-content:"🏆 Certificate";
-position:absolute;
-top:15px;
-left:15px;
-background:#ff4f94;
-color:white;
-padding:8px 18px;
-border-radius:30px;
-font-size:14px;
-font-weight:bold;
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(255,105,180,.28);
 }
 
 .card img{
 width:100%;
-height:240px;
+height:250px;
 object-fit:cover;
-transition:.5s;
-}
-
-.card:hover img{
-transform:scale(1.08);
+display:block;
 }
 
 .content{
-padding:25px;
+padding:22px;
 }
 
 .content h2{
 color:#ff4f94;
 margin-bottom:12px;
-font-size:24px;
+font-size:25px;
 }
-  
 
 .content p{
-line-height:30px;
-color:#666;
 font-size:17px;
+line-height:30px;
+color:#555;
 }
 
 footer{
-margin-top:70px;
+margin-top:60px;
 background:#ff9cc4;
-padding:22px;
+padding:20px;
 text-align:center;
 color:white;
 font-size:18px;
@@ -220,7 +200,7 @@ font-size:18px;
 
 <div class="card">
 
-<img src="images/IMG_1945.jpeg">
+<img src="images/IMG_1945.jpeg" alt="Thai MOOC">
 
 <div class="content">
 
@@ -228,38 +208,7 @@ font-size:18px;
 
 <p>
 
-
-ผ่าน<!-- เกียรติบัตร 3 -->
-
-<div class="card">
-
-<img src="images/IMG_4072.jpeg" alt="ดาวจรัสแสง">
-
-<div class="content">
-
-<h2>⭐ รางวัลดาวจรัสแสง</h2>
-
-<p>
-
-ได้รับประกาศเกียรติคุณ
-รางวัล <b>ดาวจรัสแสง</b>
-ประจำปีการศึกษา 2568
-
-<br><br>
-
-สำหรับนักเรียนที่มีผลการเรียนดีเด่น
-ระดับชั้นมัธยมศึกษาปีที่ 5/1
-มีผลการเรียนเฉลี่ยสะสม <b>3.67</b>
-
-<br><br>
-
-📅 วันที่ 26 มีนาคม 2569
-
-</p>
-
-</div>
-
-</div>การอบรมหลักสูตรออนไลน์
+ผ่านการอบรมหลักสูตรออนไลน์
 ภาษาอังกฤษเพื่อการสื่อสารสากล
 (English for Global Communication)
 
@@ -277,7 +226,7 @@ font-size:18px;
 
 <div class="card">
 
-<img src="images/IMG_4071.jpeg">
+<img src="images/IMG_4071.jpeg" alt="STEAM DAY CAMP">
 
 <div class="content">
 
@@ -285,15 +234,94 @@ font-size:18px;
 
 <p>
 
-ได้รับเกียรติเป็นผู้นำกิจกรรม
+ได้รับเกียรติเป็นผู้นำในการจัดกิจกรรม
 STEAM DAY CAMP
-เพื่อส่งเสริมการเรียนรู้ด้าน
-วิทยาศาสตร์ เทคโนโลยี
-วิศวกรรมศาสตร์ ศิลปะ
-และคณิตศาสตร์
+เพื่อส่งเสริมการเรียนรู้ด้านวิทยาศาสตร์
+เทคโนโลยี วิศวกรรมศาสตร์
+ศิลปะ และคณิตศาสตร์
+
+<br><br>
+
+📅 ปี พ.ศ. 2569
 
 </p>
 
 </div>
 
-</div> 
+</div>
+
+<!-- เกียรติบัตร 3 -->
+
+<div class="card">
+
+<img src="images/IMG_1946.jpeg" alt="ดาวจรัสแสง">
+
+<div class="content">
+
+<h2>⭐ รางวัลดาวจรัสแสง</h2>
+
+<p>
+
+ได้รับประกาศเกียรติคุณ
+รางวัลดาวจรัสแสง ประจำปีการศึกษา 2568
+
+<br><br>
+
+สำหรับนักเรียนที่มีผลการเรียนดีเด่น
+ระดับชั้นมัธยมศึกษาปีที่ 5/1
+
+<br><br>
+
+📅 ปี พ.ศ. 2569
+
+</p>
+
+</div>
+
+</div>
+<!-- ผลงาน 1 -->
+
+<div class="card">
+
+<img src="images/IMG_0813.jpeg" alt="ผลงาน 1">
+
+<div class="content">
+
+<h2>📸 ผลงาน 1</h2>
+
+<p>
+ปี พ.ศ. 2568
+</p>
+
+</div>
+
+</div>
+
+<!-- ผลงาน 2 -->
+
+<div class="card">
+
+<img src="images/IMG_0808.jpeg" alt="ผลงาน 2">
+
+<div class="content">
+
+<h2>🌟 ผลงาน 2</h2>
+
+<p>
+ปี พ.ศ. 2568
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+💖 Portfolio | UBONWAN PRASANPHUANG 💖
+
+</footer>
+
+</body>
+</html>
