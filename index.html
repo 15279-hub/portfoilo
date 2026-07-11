@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contact | Portfolio</title>
+<title>Home | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -18,9 +20,9 @@ font-family:'Kanit',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#FFEAF5,#FFF8FC);
-color:#444;
+background:linear-gradient(135deg,#FFEAF6,#FFF8FC,#FFF2F8);
 overflow-x:hidden;
+color:#444;
 }
 
 /* ซากุระ */
@@ -29,147 +31,289 @@ overflow-x:hidden;
 position:fixed;
 top:-10%;
 font-size:28px;
-animation:fall linear infinite;
 pointer-events:none;
 opacity:.8;
+animation:fall linear infinite;
+z-index:999;
 }
 
 .s1{left:5%;animation-duration:8s;}
-.s2{left:20%;animation-duration:10s;}
-.s3{left:35%;animation-duration:7s;}
-.s4{left:50%;animation-duration:9s;}
-.s5{left:65%;animation-duration:11s;}
-.s6{left:80%;animation-duration:8s;}
-.s7{left:95%;animation-duration:10s;}
+.s2{left:18%;animation-duration:10s;}
+.s3{left:30%;animation-duration:7s;}
+.s4{left:45%;animation-duration:9s;}
+.s5{left:60%;animation-duration:11s;}
+.s6{left:78%;animation-duration:8s;}
+.s7{left:93%;animation-duration:10s;}
 
 @keyframes fall{
-0%{transform:translateY(-100px) rotate(0deg);}
-100%{transform:translateY(110vh) rotate(360deg);}
+
+0%{
+transform:translateY(-100px) rotate(0deg);
+}
+
+100%{
+transform:translateY(110vh) rotate(360deg);
+}
+
+}
+  /* ❄ Snow Effect */
+
+.snow{
+position:fixed;
+top:-10%;
+background:white;
+border-radius:50%;
+pointer-events:none;
+opacity:.85;
+animation:snowFall linear infinite;
+box-shadow:0 0 8px rgba(255,255,255,.8);
+z-index:998;
+}
+
+.n1{left:5%;width:6px;height:6px;animation-duration:8s;animation-delay:0s;}
+.n2{left:15%;width:10px;height:10px;animation-duration:12s;animation-delay:2s;}
+.n3{left:28%;width:7px;height:7px;animation-duration:9s;animation-delay:1s;}
+.n4{left:40%;width:12px;height:12px;animation-duration:13s;animation-delay:3s;}
+.n5{left:55%;width:8px;height:8px;animation-duration:10s;animation-delay:1s;}
+.n6{left:68%;width:5px;height:5px;animation-duration:8s;animation-delay:2s;}
+.n7{left:80%;width:11px;height:11px;animation-duration:11s;animation-delay:0s;}
+.n8{left:92%;width:7px;height:7px;animation-duration:9s;animation-delay:2s;}
+
+@keyframes snowFall{
+
+0%{
+transform:translateY(-100px) translateX(0);
+}
+
+25%{
+transform:translateY(25vh) translateX(-15px);
+}
+
+50%{
+transform:translateY(50vh) translateX(15px);
+}
+
+75%{
+transform:translateY(75vh) translateX(-10px);
+}
+
+100%{
+transform:translateY(110vh) translateX(10px);
+}
+
 }
 
 /* เมนู */
 
 nav{
-background:white;
+
+position:sticky;
+
+top:0;
+
+background:rgba(255,255,255,.92);
+
+backdrop-filter:blur(10px);
+
 padding:18px;
+
 text-align:center;
+
 box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+z-index:1000;
+
 }
 
 nav a{
+
 text-decoration:none;
-color:#666;
+
 margin:0 18px;
+
+color:#666;
+
 font-size:18px;
+
 font-weight:500;
-transition:.3s;
+
+transition:.35s;
+
 }
 
 nav a:hover{
+
 color:#ff4f94;
+
 }
 
-/* กล่องข้อมูล */
+/* หน้าแรก */
 
-.container{
-max-width:850px;
-margin:50px auto;
-padding:20px;
-}
+.hero{
 
-.card{
-background:white;
-border-radius:30px;
-padding:40px;
-text-align:center;
-box-shadow:0 12px 25px rgba(255,105,180,.15);
-}
+max-width:1200px;
 
-.card img{
-width:200px;
-height:200px;
-border-radius:50%;
-object-fit:cover;
-border:6px solid #FFD6E8;
-margin-bottom:20px;
-}
+margin:auto;
 
-.card h1{
-color:#ff4f94;
-font-size:38px;
-}
+min-height:90vh;
 
-.card p{
-margin-top:10px;
-color:#777;
-font-size:18px;
-}
+display:flex;
 
-.contact-box{
-margin-top:35px;
-}
+justify-content:center;
 
-.item{
-background:#FFF0F7;
-padding:18px;
-margin:15px 0;
-border-radius:18px;
-font-size:18px;
-}
+align-items:center;
 
-.item a{
-text-decoration:none;
-color:#ff4f94;
-font-weight:bold;
-}
-
-/* เมนูด้านล่าง */
-
-.menu-grid{
-max-width:900px;
-margin:50px auto;
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-padding:0 20px;
-}
-
-.menu-card{
-background:white;
-border-radius:20px;
 padding:30px;
-text-align:center;
-text-decoration:none;
-color:#ff4f94;
-font-size:22px;
-font-weight:bold;
-box-shadow:0 10px 20px rgba(255,105,180,.15);
-transition:.3s;
+
 }
 
-.menu-card:hover{
+.hero-card{
+
+background:white;
+
+width:100%;
+
+max-width:1000px;
+
+border-radius:40px;
+
+padding:60px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:50px;
+
+box-shadow:0 15px 35px rgba(255,105,180,.18);
+
+transition:.4s;
+
+}
+
+.hero-card:hover{
+
 transform:translateY(-8px);
-background:#FFE2EE;
+
 }
 
-.menu-card span{
-display:block;
-font-size:45px;
-margin-bottom:10px;
+.hero img{
+
+width:300px;
+
+height:300px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+border:8px solid #FFD7E8;
+
+box-shadow:0 10px 25px rgba(255,105,180,.25);
+
 }
 
-footer{
-margin-top:60px;
-background:#ff9cc4;
-padding:20px;
-text-align:center;
+.text{
+
+flex:1;
+
+}
+
+.text h3{
+
+font-size:22px;
+
+letter-spacing:5px;
+
+color:#ff8dbb;
+
+margin-bottom:15px;
+
+}
+
+.text h1{
+
+font-size:60px;
+
+color:#ff4f94;
+
+line-height:70px;
+
+margin-bottom:20px;
+
+}
+
+.text p{
+
+font-size:20px;
+
+line-height:36px;
+
+color:#666;
+
+margin-bottom:35px;
+
+}
+
+.button{
+
+display:inline-block;
+
+padding:18px 45px;
+
+background:#ff4f94;
+
 color:white;
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-size:20px;
+
+font-weight:600;
+
+transition:.35s;
+
 }
 
-@media(max-width:768px){
+.button:hover{
 
-.menu-grid{
-grid-template-columns:1fr;
+background:#ff2b80;
+
+transform:translateY(-5px);
+
+box-shadow:0 10px 20px rgba(255,105,180,.3);
+
+}
+
+@media(max-width:900px){
+
+.hero-card{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.hero img{
+
+width:220px;
+
+height:220px;
+
+
+}
+
+.text h1{
+
+font-size:42px;
+
+line-height:50px;
+
 }
 
 }
@@ -177,8 +321,18 @@ grid-template-columns:1fr;
 </style>
 
 </head>
-
+  <span class="sakura s7">🌸</span>
+  <div class="snow n1"></div>
+<div class="snow n2"></div>
+<div class="snow n3"></div>
+<div class="snow n4"></div>
+<div class="snow n5"></div>
+<div class="snow n6"></div>
+<div class="snow n7"></div>
+<div class="snow n8"></div>
 <body>
+
+<!-- ซากุระ -->
 
 <span class="sakura s1">🌸</span>
 <span class="sakura s2">🌸</span>
@@ -188,82 +342,59 @@ grid-template-columns:1fr;
 <span class="sakura s6">🌸</span>
 <span class="sakura s7">🌸</span>
 
+<!-- เมนู -->
+
 <nav>
 
-<a href="index.html">Home</a>
-<a href="profile.html">Profile</a>
-<a href="education.html">Education</a>
-<a href="award.html">Awards</a>
-<a href="contact.html">Contact</a>
+<a href="index.html">🏠 Home</a>
+
+<a href="sop.html">📝 SOP</a>
+
+<a href="profile.html">👤 Profile</a>
+
+<a href="education.html">🎓 Education</a>
+
+<a href="award.html">🏆 Awards</a>
+
+<a href="contact.html">📞 Contact</a>
 
 </nav>
 
-<div class="container">
+<!-- หน้าแรก -->
 
-<div class="card">
+<section class="hero">
+
+<div class="hero-card">
 
 <img src="images/73A7F7EC-551A-4D91-9308-051B8C7B625E.jpeg" alt="Profile">
 
-<h1>อุบลวรรณ ประสานพวง</h1>
+<div class="text">
 
-<p>สามารถติดต่อฉันได้ผ่านช่องทางด้านล่าง</p>
+<h3>WELCOME TO MY PORTFOLIO</h3>
 
-<div class="contact-box">
+<h1>
+UBONWAN<br>
+PRASANPUANG
+</h1>
 
-<div class="item">
-📷 Instagram<br>
-<a href="https://www.instagram.com/taengmo_.14" target="_blank">
-@taengmo_.14
-</a>
-</div>
+<p>
 
-<div class="item">
-📧 Email<br>
-<a href="mailto:ubonwankimm09@gmail.com">
-ubonwankimm09@gmail.com
-</a>
-</div>
+Portfolio สำหรับการเข้าศึกษาต่อ<br>
 
-</div>
+<strong>คณะพยาบาลศาสตร์</strong><br>
 
-</div>
+มหาวิทยาลัยขอนแก่น
 
-</div>
+</p>
 
-<div class="menu-grid">
+<a href="sop.html" class="button">
 
-<a href="profile.html" class="menu-card">
-<span>👤</span>
-Profile
-</a>
+ENTER PORTFOLIO
 
-<a href="education.html" class="menu-card">
-<span>🎓</span>
-Education
-</a>
-
-<a href="award.html" class="menu-card">
-<span>🏆</span>
-Awards
-</a>
-
-<a href="contact.html" class="menu-card">
-<span>📞</span>
-Contact
-</a>
-
-<a href="sop.html" class="menu-card">
-<span>📝</span>
-SOP
 </a>
 
 </div>
 
-<footer>
+</div>
 
-💖 Thank you for visiting my Portfolio 💖
-
-</footer>
-
-</body>
-</html>
+</section>
