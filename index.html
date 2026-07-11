@@ -17,109 +17,165 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Kanit',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
+
 background:linear-gradient(135deg,#FFEAF6,#FFF8FC,#FFF2F8);
+
 overflow-x:hidden;
+
 color:#444;
+
 }
 
-/* ซากุระ */
+/* Scroll */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#ff8fc2;
+
+border-radius:20px;
+
+}
+
+/* ===== ซากุระ ===== */
 
 .sakura{
+
 position:fixed;
+
 top:-10%;
+
 font-size:28px;
+
 pointer-events:none;
+
 opacity:.8;
+
 animation:fall linear infinite;
+
 z-index:999;
+
 }
 
 .s1{left:5%;animation-duration:8s;}
-.s2{left:18%;animation-duration:10s;}
-.s3{left:30%;animation-duration:7s;}
-.s4{left:45%;animation-duration:9s;}
-.s5{left:60%;animation-duration:11s;}
-.s6{left:78%;animation-duration:8s;}
-.s7{left:93%;animation-duration:10s;}
+.s2{left:15%;animation-duration:10s;}
+.s3{left:28%;animation-duration:7s;}
+.s4{left:42%;animation-duration:9s;}
+.s5{left:57%;animation-duration:11s;}
+.s6{left:72%;animation-duration:8s;}
+.s7{left:88%;animation-duration:10s;}
 
 @keyframes fall{
 
 0%{
-transform:translateY(-100px) rotate(0deg);
+
+transform:translateY(-120px) rotate(0deg);
+
 }
 
 100%{
+
 transform:translateY(110vh) rotate(360deg);
+
 }
 
 }
-  /* ❄ Snow Effect */
+
+/* ===== หิมะ ===== */
 
 .snow{
+
 position:fixed;
-top:-10%;
+
+top:-20px;
+
 background:white;
+
 border-radius:50%;
+
+opacity:.9;
+
 pointer-events:none;
-opacity:.85;
-animation:snowFall linear infinite;
-box-shadow:0 0 8px rgba(255,255,255,.8);
-z-index:998;
+
+animation:snow linear infinite;
+
+box-shadow:0 0 10px rgba(255,255,255,.9);
+
 }
 
-.n1{left:5%;width:6px;height:6px;animation-duration:8s;animation-delay:0s;}
-.n2{left:15%;width:10px;height:10px;animation-duration:12s;animation-delay:2s;}
-.n3{left:28%;width:7px;height:7px;animation-duration:9s;animation-delay:1s;}
-.n4{left:40%;width:12px;height:12px;animation-duration:13s;animation-delay:3s;}
-.n5{left:55%;width:8px;height:8px;animation-duration:10s;animation-delay:1s;}
-.n6{left:68%;width:5px;height:5px;animation-duration:8s;animation-delay:2s;}
-.n7{left:80%;width:11px;height:11px;animation-duration:11s;animation-delay:0s;}
-.n8{left:92%;width:7px;height:7px;animation-duration:9s;animation-delay:2s;}
+.n1{left:8%;width:6px;height:6px;animation-duration:8s;}
+.n2{left:18%;width:10px;height:10px;animation-duration:12s;}
+.n3{left:30%;width:7px;height:7px;animation-duration:9s;}
+.n4{left:45%;width:12px;height:12px;animation-duration:13s;}
+.n5{left:58%;width:8px;height:8px;animation-duration:10s;}
+.n6{left:72%;width:5px;height:5px;animation-duration:8s;}
+.n7{left:85%;width:11px;height:11px;animation-duration:11s;}
+.n8{left:95%;width:7px;height:7px;animation-duration:9s;}
 
-@keyframes snowFall{
+@keyframes snow{
 
 0%{
-transform:translateY(-100px) translateX(0);
+
+transform:translateY(-50px) translateX(0);
+
 }
 
 25%{
+
 transform:translateY(25vh) translateX(-15px);
+
 }
 
 50%{
+
 transform:translateY(50vh) translateX(15px);
+
 }
 
 75%{
+
 transform:translateY(75vh) translateX(-10px);
+
 }
 
 100%{
+
 transform:translateY(110vh) translateX(10px);
-}
 
 }
 
-/* เมนู */
+}
+
+/* ===== เมนู ===== */
 
 nav{
 
-position:sticky;
+position:fixed;
 
 top:0;
 
-background:rgba(255,255,255,.92);
+left:0;
 
-backdrop-filter:blur(10px);
+width:100%;
 
 padding:18px;
 
-text-align:center;
+background:rgba(255,255,255,.85);
+
+backdrop-filter:blur(15px);
 
 box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+text-align:center;
 
 z-index:1000;
 
@@ -131,13 +187,13 @@ text-decoration:none;
 
 margin:0 18px;
 
-color:#666;
-
 font-size:18px;
 
-font-weight:500;
+font-weight:600;
 
-transition:.35s;
+color:#666;
+
+transition:.3s;
 
 }
 
@@ -147,15 +203,11 @@ color:#ff4f94;
 
 }
 
-/* หน้าแรก */
+/* ===== Hero ===== */
 
 .hero{
 
-max-width:1200px;
-
-margin:auto;
-
-min-height:90vh;
+min-height:100vh;
 
 display:flex;
 
@@ -163,21 +215,23 @@ justify-content:center;
 
 align-items:center;
 
-padding:30px;
+padding:40px;
 
 }
 
 .hero-card{
 
-background:white;
+background:rgba(255,255,255,.75);
 
-width:100%;
-
-max-width:1000px;
+backdrop-filter:blur(15px);
 
 border-radius:40px;
 
 padding:60px;
+
+max-width:1100px;
+
+width:100%;
 
 display:flex;
 
@@ -187,37 +241,64 @@ justify-content:space-between;
 
 gap:50px;
 
-box-shadow:0 15px 35px rgba(255,105,180,.18);
+box-shadow:0 20px 40px rgba(255,105,180,.18);
 
-transition:.4s;
+animation:show 1s ease;
+
+}
+
+@keyframes show{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
 
 }
 
-.hero-card:hover{
+to{
 
-transform:translateY(-8px);
+opacity:1;
+
+transform:translateY(0);
 
 }
+
+}
+  /* ===== รูป ===== */
 
 .hero img{
 
-width:300px;
+width:330px;
 
-height:300px;
+height:330px;
 
 object-fit:cover;
 
 border-radius:50%;
 
-border:8px solid #FFD7E8;
+border:8px solid #FFD6E8;
 
-box-shadow:0 10px 25px rgba(255,105,180,.25);
+box-shadow:0 15px 35px rgba(255,105,180,.25);
+
+transition:.4s;
 
 }
+
+.hero img:hover{
+
+transform:scale(1.05) rotate(-2deg);
+
+}
+
+/* ===== ข้อความ ===== */
 
 .text{
 
 flex:1;
+
+animation:show 1.2s ease;
 
 }
 
@@ -225,9 +306,9 @@ flex:1;
 
 font-size:22px;
 
-letter-spacing:5px;
+letter-spacing:6px;
 
-color:#ff8dbb;
+color:#ff90bf;
 
 margin-bottom:15px;
 
@@ -235,35 +316,23 @@ margin-bottom:15px;
 
 .text h1{
 
-font-size:60px;
+font-size:68px;
+
+line-height:72px;
 
 color:#ff4f94;
 
-line-height:70px;
-
 margin-bottom:20px;
 
-}
-  .text h2{
+text-shadow:2px 2px 10px rgba(255,105,180,.2);
 
-font-size:26px;
+}
+
+.text h2{
+
+font-size:28px;
 
 font-weight:400;
-
-color:#ff8dbb;
-
-margin-bottom:35px;
-
-letter-spacing:2px;
-
-}
-  
-
-.text p{
-
-font-size:20px;
-
-line-height:36px;
 
 color:#666;
 
@@ -271,13 +340,15 @@ margin-bottom:35px;
 
 }
 
+/* ===== ปุ่ม ===== */
+
 .button{
 
 display:inline-block;
 
 padding:18px 45px;
 
-background:#ff4f94;
+background:linear-gradient(90deg,#ff78b2,#ff4f94);
 
 color:white;
 
@@ -289,19 +360,21 @@ font-size:20px;
 
 font-weight:600;
 
+box-shadow:0 10px 25px rgba(255,105,180,.35);
+
 transition:.35s;
 
 }
 
 .button:hover{
 
-background:#ff2b80;
+transform:translateY(-6px);
 
-transform:translateY(-5px);
-
-box-shadow:0 10px 20px rgba(255,105,180,.3);
+box-shadow:0 15px 30px rgba(255,105,180,.4);
 
 }
+
+/* ===== Responsive ===== */
 
 @media(max-width:900px){
 
@@ -311,39 +384,149 @@ flex-direction:column;
 
 text-align:center;
 
+padding:40px;
+
 }
 
 .hero img{
 
-width:220px;
+width:230px;
 
-height:220px;
-
+height:230px;
 
 }
 
 .text h1{
 
-font-size:42px;
+font-size:48px;
 
-line-height:50px;
+line-height:55px;
 
 }
+
+.text h2{
+
+font-size:22px;
+
+}
+
+nav a{
+
+display:inline-block;
+
+margin:8px;
+
+}
+
+}
+  /* ===== About ===== */
+
+.about{
+
+padding:40px;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.about-card{
+
+max-width:950px;
+
+background:rgba(255,255,255,.8);
+
+backdrop-filter:blur(15px);
+
+padding:45px;
+
+border-radius:35px;
+
+text-align:center;
+
+box-shadow:0 15px 30px rgba(255,105,180,.18);
+
+}
+
+.about-card h2{
+
+font-size:40px;
+
+color:#ff4f94;
+
+margin-bottom:25px;
+
+}
+
+.about-card p{
+
+font-size:20px;
+
+line-height:38px;
+
+color:#666;
+
+}
+
+/* ===== Quote ===== */
+
+.quote{
+
+padding:70px 20px;
+
+text-align:center;
+
+}
+
+.quote h2{
+
+font-size:34px;
+
+color:#ff6aa8;
+
+font-style:italic;
+
+text-shadow:2px 2px 8px rgba(255,182,193,.5);
+
+}
+
+/* ===== Footer ===== */
+
+footer{
+
+margin-top:50px;
+
+background:linear-gradient(90deg,#ffb5d4,#ff8fc2);
+
+padding:35px;
+
+text-align:center;
+
+color:white;
+
+}
+
+footer h2{
+
+font-size:30px;
+
+margin-bottom:10px;
+
+}
+
+footer p{
+
+font-size:18px;
+
+margin:8px 0;
 
 }
 
 </style>
 
 </head>
-  <span class="sakura s7">🌸</span>
-  <div class="snow n1"></div>
-<div class="snow n2"></div>
-<div class="snow n3"></div>
-<div class="snow n4"></div>
-<div class="snow n5"></div>
-<div class="snow n6"></div>
-<div class="snow n7"></div>
-<div class="snow n8"></div>
+
 <body>
 
 <!-- ซากุระ -->
@@ -355,6 +538,17 @@ line-height:50px;
 <span class="sakura s5">🌸</span>
 <span class="sakura s6">🌸</span>
 <span class="sakura s7">🌸</span>
+
+<!-- หิมะ -->
+
+<div class="snow n1"></div>
+<div class="snow n2"></div>
+<div class="snow n3"></div>
+<div class="snow n4"></div>
+<div class="snow n5"></div>
+<div class="snow n6"></div>
+<div class="snow n7"></div>
+<div class="snow n8"></div>
 
 <!-- เมนู -->
 
@@ -374,22 +568,31 @@ line-height:50px;
 
 </nav>
 
-<!-- หน้าแรก -->
+<!-- Hero -->
 
 <section class="hero">
 
 <div class="hero-card">
 
 <img src="images/73A7F7EC-551A-4D91-9308-051B8C7B625E.jpeg" alt="Profile">
+
 <div class="text">
 
 <h3>WELCOME TO MY PORTFOLIO</h3>
 
 <h1>
+
 UBONWAN<br>
+
 PRASANPUANG
+
 </h1>
 
+<h2>
+
+Future Nursing Student 🌸
+
+</h2>
 
 <a href="sop.html" class="button">
 
@@ -401,5 +604,66 @@ ENTER PORTFOLIO
 
 </div>
 
+</section>
+<!-- About Me -->
+
+<section class="about">
+
+<div class="about-card">
+
+<h2>🌸 About Me</h2>
+
+<p>
+
+สวัสดีค่ะ ดิฉัน <strong>อุบลวรรณ ประสานพวง</strong><br><br>
+
+มีความใฝ่ฝันที่จะศึกษาต่อ
+<strong>คณะพยาบาลศาสตร์ มหาวิทยาลัยขอนแก่น</strong>
+
+เพราะเชื่อว่าการเป็นพยาบาลคือการดูแลผู้อื่นด้วยความรู้ ความเมตตา และความเสียสละ
+
+ดิฉันพร้อมที่จะเรียนรู้ พัฒนาตนเอง และเติบโตเป็นพยาบาลที่มีคุณภาพในอนาคต
+
+</p>
+
+</div>
 
 </section>
+
+<!-- Quote -->
+
+<section class="quote">
+
+<h2>
+
+"การดูแลผู้ป่วยด้วยหัวใจ คือคุณค่าของวิชาชีพพยาบาล"
+
+</h2>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+<h2>💖 Thank You For Visiting 💖</h2>
+
+<p>
+
+UBONWAN PRASANPUANG
+
+</p>
+
+<p>
+
+Faculty of Nursing
+
+Khon Kaen University
+
+</p>
+
+</footer>
+
+</body>
+
+</html>
