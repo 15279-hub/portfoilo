@@ -358,6 +358,46 @@ border-color:transparent;
 }
 
 }
+  .typing,
+.typing2{
+
+display:inline-block;
+overflow:hidden;
+white-space:nowrap;
+border-right:3px solid #ff4f94;
+width:0;
+
+}
+
+.typing{
+animation:typing 2s steps(10,end) forwards,
+blink .8s infinite;
+}
+
+.typing2{
+animation:typing 2s steps(12,end) forwards .8s,
+blink .8s infinite .8s;
+}
+
+@keyframes typing{
+
+from{
+width:0;
+}
+
+to{
+width:100%;
+}
+
+}
+
+@keyframes blink{
+
+50%{
+border-color:transparent;
+}
+
+}
 
 </style>
 
