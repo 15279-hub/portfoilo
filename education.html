@@ -41,15 +41,12 @@ z-index:999;
 .s6{left:90%;animation-duration:8s;}
 
 @keyframes fall{
-
 0%{
 transform:translateY(-100px) rotate(0deg);
 }
-
 100%{
 transform:translateY(110vh) rotate(360deg);
 }
-
 }
 
 /* เมนู */
@@ -76,39 +73,42 @@ color:#ff4f94;
 /* หัวข้อ */
 
 .title{
-
 text-align:center;
 margin-top:50px;
-
 }
 
 .title h1{
-
 font-size:50px;
 color:#ff4f94;
-
 }
 
 .title p{
-
 font-size:20px;
 color:#777;
 margin-top:10px;
+}
 
+/* รูปโปรไฟล์ */
+
+.profile{
+width:190px;
+height:190px;
+border-radius:50%;
+object-fit:cover;
+margin-top:30px;
+border:6px solid #FFD6E8;
+box-shadow:0 10px 25px rgba(255,105,180,.25);
 }
 
 /* Timeline */
 
 .timeline{
-
 max-width:900px;
 margin:60px auto;
 position:relative;
-
 }
 
 .timeline::before{
-
 content:"";
 position:absolute;
 left:50%;
@@ -118,11 +118,9 @@ height:100%;
 background:#ffb6d5;
 transform:translateX(-50%);
 border-radius:20px;
-
 }
 
 .card{
-
 width:40%;
 background:white;
 padding:30px;
@@ -131,31 +129,22 @@ box-shadow:0 10px 25px rgba(255,105,180,.18);
 position:relative;
 margin-bottom:60px;
 transition:.3s;
-
 }
 
 .card:hover{
-
 transform:translateY(-8px);
-
 }
 
 .left{
-
 left:0;
-
 }
 
 .right{
-
 left:60%;
-
 }
 
 .dot{
-
 position:absolute;
-top:40px;
 left:50%;
 transform:translateX(-50%);
 width:25px;
@@ -164,34 +153,27 @@ background:#ff4f94;
 border-radius:50%;
 border:5px solid white;
 z-index:10;
-
 }
 
 .card h2{
-
 color:#ff4f94;
 margin-bottom:15px;
-
 }
 
 .card p{
-
 font-size:18px;
 line-height:35px;
 color:#555;
-
 }
 
 /* Footer */
 
 footer{
-
 background:#ff9cc4;
 padding:20px;
 text-align:center;
 color:white;
 margin-top:40px;
-
 }
 
 @media(max-width:768px){
@@ -225,13 +207,11 @@ left:25px;
 <span class="sakura s6">🌸</span>
 
 <nav>
-
 <a href="index.html">Home</a>
 <a href="profile.html">Profile</a>
 <a href="education.html">Education</a>
 <a href="award.html">Awards</a>
 <a href="contact.html">Contact</a>
-
 </nav>
 
 <div class="title">
@@ -239,6 +219,8 @@ left:25px;
 <h1>🎓 Education</h1>
 
 <p>ประวัติการศึกษา</p>
+
+<img src="images/73A7F7EC-551A-4D91-9308-051B8C7B625E.jpeg" class="profile" alt="Profile">
 
 </div>
 
@@ -251,21 +233,13 @@ left:25px;
 <h2>📚 มัธยมศึกษาตอนต้น</h2>
 
 <p>
-
 <b>โรงเรียน :</b> โรงเรียนพานทอง
-
 <br><br>
-
 <b>แผนการเรียน :</b> วิทยาศาสตร์ - คณิตศาสตร์
-
 <br><br>
-
 <b>เข้าศึกษา :</b> ปีการศึกษา 2564
-
 <br><br>
-
 <b>สำเร็จการศึกษา :</b> ปีการศึกษา 2566
-
 </p>
 
 </div>
@@ -277,21 +251,13 @@ left:25px;
 <h2>🎀 มัธยมศึกษาตอนปลาย</h2>
 
 <p>
-
 <b>โรงเรียน :</b> โรงเรียนพานทอง
-
 <br><br>
-
 <b>แผนการเรียน :</b> วิทยาศาสตร์ - คณิตศาสตร์
-
 <br><br>
-
 <b>เข้าศึกษา :</b> ปีการศึกษา 2567
-
 <br><br>
-
 <b>สำเร็จการศึกษา :</b> ปีการศึกษา 2569
-
 </p>
 
 </div>
