@@ -18,7 +18,7 @@ font-family:'Kanit',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#FFE8F3,#FFF8FC);
+background:linear-gradient(135deg,#FFEAF4,#FFF8FC,#FFE3F1);
 overflow-x:hidden;
 }
 
@@ -31,19 +31,20 @@ font-size:28px;
 pointer-events:none;
 animation:fall linear infinite;
 opacity:.9;
+z-index:999;
 }
 
 .s1{left:5%;animation-duration:8s;}
-.s2{left:20%;animation-duration:10s;}
+.s2{left:18%;animation-duration:11s;}
 .s3{left:35%;animation-duration:7s;}
 .s4{left:50%;animation-duration:9s;}
-.s5{left:65%;animation-duration:11s;}
-.s6{left:80%;animation-duration:8s;}
-.s7{left:95%;animation-duration:10s;}
+.s5{left:67%;animation-duration:10s;}
+.s6{left:82%;animation-duration:8s;}
+.s7{left:95%;animation-duration:12s;}
 
 @keyframes fall{
 0%{
-transform:translateY(-100px) rotate(0deg);
+transform:translateY(-120px) rotate(0deg);
 }
 100%{
 transform:translateY(110vh) rotate(360deg);
@@ -56,15 +57,19 @@ nav{
 background:white;
 padding:18px;
 text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
+box-shadow:0 5px 18px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 nav a{
 text-decoration:none;
 margin:0 18px;
-color:#666;
 font-size:18px;
 font-weight:500;
+color:#666;
+transition:.3s;
 }
 
 nav a:hover{
@@ -75,89 +80,106 @@ color:#ff4f94;
 
 .title{
 text-align:center;
-margin:50px 20px;
+padding:60px 20px 30px;
 }
 
 .title h1{
-font-size:48px;
+font-size:55px;
 color:#ff4f94;
+margin-bottom:15px;
 }
 
 .title p{
+font-size:20px;
 color:#777;
-font-size:18px;
-margin-top:10px;
+}
+
+.line{
+width:120px;
+height:5px;
+background:#ff7db5;
+margin:25px auto;
+border-radius:20px;
 }
 
 /* Gallery */
 
 .gallery{
-
-max-width:1100px;
+max-width:1200px;
 margin:auto;
 padding:20px;
-
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:35px;
 }
 
+/* Card */
+
 .card{
-
 background:white;
-padding:20px;
-border-radius:25px;
-box-shadow:0 10px 25px rgba(255,105,180,.18);
-transition:.3s;
-
+border-radius:30px;
+overflow:hidden;
+box-shadow:0 15px 35px rgba(255,105,180,.18);
+transition:.4s;
+position:relative;
 }
 
 .card:hover{
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 20px 40px rgba(255,105,180,.3);
+}
 
-transform:translateY(-10px);
-
+.card::before{
+content:"🏆 Certificate";
+position:absolute;
+top:15px;
+left:15px;
+background:#ff4f94;
+color:white;
+padding:8px 18px;
+border-radius:30px;
+font-size:14px;
+font-weight:bold;
 }
 
 .card img{
-
 width:100%;
-height:230px;
+height:240px;
 object-fit:cover;
-border-radius:15px;
-background:#ffe6f1;
-
+transition:.5s;
 }
 
-.card h2{
+.card:hover img{
+transform:scale(1.08);
+}
 
-margin-top:18px;
+.content{
+padding:25px;
+}
+
+.content h2{
 color:#ff4f94;
-
+margin-bottom:12px;
+font-size:24px;
 }
 
-.card p{
-
-margin-top:10px;
+.content p{
+line-height:30px;
 color:#666;
-line-height:28px;
-
+font-size:17px;
 }
 
 footer{
-
-margin-top:60px;
+margin-top:70px;
 background:#ff9cc4;
-color:white;
-padding:20px;
+padding:22px;
 text-align:center;
-
+color:white;
+font-size:18px;
 }
 
 </style>
-
 </head>
-
 <body>
 
 <span class="sakura s1">🌸</span>
@@ -170,6 +192,7 @@ text-align:center;
 
 <nav>
 
+<a href="index.html">Home</a>
 <a href="profile.html">Profile</a>
 <a href="education.html">Education</a>
 <a href="award.html">Awards</a>
@@ -179,72 +202,105 @@ text-align:center;
 
 <div class="title">
 
-<h1>🏆 Awards & Certificates</h1>
+<h1>🏆 Awards & Achievements</h1>
 
-<p>ผลงานและเกียรติบัตร</p>
+<p>
+รวมเกียรติบัตร ผลงาน และความภาคภูมิใจ
+ตลอดการศึกษา
+</p>
+
+<div class="line"></div>
 
 </div>
 
 <div class="gallery">
 
+<!-- เกียรติบัตร 1 -->
+
 <div class="card">
 
 <img src="images/IMG_1945.jpeg">
 
-<h2>🏅 เกียรติบัตรที่ 1</h2>
+<div class="content">
+
 <h2>🌍 Thai MOOC</h2>
 
 <p>
+
 ผ่านการอบรมหลักสูตรออนไลน์
 ภาษาอังกฤษเพื่อการสื่อสารสากล
 (English for Global Communication)
-จำนวน 3 ชั่วโมง
-ปี พ.ศ. 2568
+
+<br><br>
+
+📅 ปี พ.ศ. 2568
+
 </p>
 
 </div>
+
+</div>
+
+<!-- เกียรติบัตร 2 -->
 
 <div class="card">
 
 <img src="images/IMG_4071.jpeg">
 
-<h2>🥇 เกียรติบัตรที่ 2</h2>
-<h2>🔬 ผู้นำกิจกรรม STEAM DAY CAMP</h2>
+<div class="content">
+
+<h2>🔬 STEAM DAY CAMP</h2>
 
 <p>
-ได้รับเกียรติเป็นผู้นำในการจัดกิจกรรม
-STEAM DAY CAMP ประจำปีการศึกษา 2569
-เพื่อส่งเสริมการเรียนรู้ด้านวิทยาศาสตร์ เทคโนโลยี
-วิศวกรรมศาสตร์ ศิลปะ และคณิตศาสตร์
+
+ได้รับเกียรติเป็นผู้นำกิจกรรม
+STEAM DAY CAMP
+เพื่อส่งเสริมการเรียนรู้ด้าน
+วิทยาศาสตร์ เทคโนโลยี
+วิศวกรรมศาสตร์ ศิลปะ
+และคณิตศาสตร์
+
 </p>
 
+</div>
 
 </div>
+  <!-- ผลงาน 1 -->
 
 <div class="card">
 
 <img src="images/IMG_0813.jpeg">
 
-<h2>🎖 ผลงาน</h2>
+<div class="content">
+
+<h2>📸 ผลงานกิจกรรม</h2>
 
 <p>
-ปี พ.ศ. 2568
+เข้าร่วมกิจกรรมของโรงเรียน
+เพื่อพัฒนาทักษะการทำงานร่วมกับผู้อื่น
+และเสริมสร้างประสบการณ์นอกห้องเรียน
 </p>
 
 </div>
+
+</div>
+
+<!-- ผลงาน 2 -->
 
 <div class="card">
 
 <img src="images/IMG_0808.jpeg">
 
-<h2>⭐ ผลงาน</h2>
+<div class="content">
+
+<h2>🌟 ผลงานกิจกรรม</h2>
+
+<p>
+เข้าร่วมกิจกรรมที่ได้รับมอบหมาย
+แสดงความรับผิดชอบ ความร่วมมือ
+และความเสียสละ
+</p>
+
 </div>
 
-<footer>
-
-💖 Portfolio | Ubonwan Prasanpuang 💖
-
-</footer>
-
-</body>
-</html>
+</div>
