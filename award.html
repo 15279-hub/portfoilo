@@ -1,164 +1,110 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Awards | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 *{
+
 margin:0;
+
 padding:0;
+
 box-sizing:border-box;
+
 font-family:'Kanit',sans-serif;
+
 }
 
 body{
-background:linear-gradient(135deg,#FFEAF4,#FFF8FC);
+
+background:linear-gradient(135deg,#FFEAF6,#FFF8FC,#FFF3F9);
+
 overflow-x:hidden;
+
+color:#555;
+
 }
 
-/* ซากุระ */
+/* =======================
+
+SAKURA
+
+======================= */
 
 .sakura{
+
 position:fixed;
+
 top:-10%;
-font-size:26px;
+
+font-size:28px;
+
 pointer-events:none;
-animation:fall linear infinite;
+
 opacity:.8;
+
+animation:fall linear infinite;
+
+z-index:999;
+
 }
 
 .s1{left:5%;animation-duration:8s;}
 .s2{left:18%;animation-duration:10s;}
-.s3{left:35%;animation-duration:9s;}
-.s4{left:52%;animation-duration:7s;}
-.s5{left:68%;animation-duration:11s;}
-.s6{left:82%;animation-duration:8s;}
-.s7{left:95%;animation-duration:10s;}
+.s3{left:30%;animation-duration:7s;}
+.s4{left:45%;animation-duration:9s;}
+.s5{left:60%;animation-duration:11s;}
+.s6{left:78%;animation-duration:8s;}
+.s7{left:93%;animation-duration:10s;}
 
 @keyframes fall{
 
 0%{
+
 transform:translateY(-100px) rotate(0deg);
+
 }
 
 100%{
+
 transform:translateY(110vh) rotate(360deg);
-}
 
 }
 
-/* เมนู */
-
-nav{
-background:white;
-padding:18px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
-nav a{
-text-decoration:none;
-margin:0 18px;
-font-size:18px;
-font-weight:600;
-color:#666;
-transition:.3s;
-}
+/* =======================
 
-nav a:hover{
-color:#ff4f94;
-}
+SNOW
 
-/* หัวข้อ */
-
-.title{
-text-align:center;
-margin:50px 20px;
-}
-
-.title h1{
-font-size:50px;
-color:#ff4f94;
-}
-
-.title p{
-font-size:20px;
-color:#666;
-margin-top:10px;
-}
-
-.line{
-width:120px;
-height:5px;
-background:#ff77b4;
-margin:18px auto;
-border-radius:20px;
-}
-
-/* Gallery */
-
-.gallery{
-max-width:1200px;
-margin:auto;
-padding:20px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
-gap:30px;
-}
-
-/* Card */
-
-.card{
-background:white;
-border-radius:25px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(255,105,180,.18);
-transition:.35s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 20px 40px rgba(255,105,180,.28);
-}
-
-.card img{
-width:100%;
-height:250px;
-object-fit:cover;
-display:block;
-}
-
-.content{
-padding:22px;
-}
-
-.content h2{
-color:#ff4f94;
-margin-bottom:12px;
-font-size:25px;
-}
-
-.content p{
-font-size:17px;
-line-height:30px;
-color:#555;
-}
-  /* หิมะ */
+======================= */
 
 .snow{
+
 position:fixed;
+
 top:-20px;
+
 background:white;
+
 border-radius:50%;
-animation:snow linear infinite;
+
 pointer-events:none;
+
 opacity:.9;
+
+animation:snow linear infinite;
+
 }
 
 .n1{left:8%;width:8px;height:8px;animation-duration:8s;}
@@ -172,34 +118,312 @@ opacity:.9;
 @keyframes snow{
 
 0%{
+
 transform:translateY(-20px);
+
 }
 
 100%{
+
 transform:translateY(110vh);
+
 }
 
 }
+
+/* =======================
+
+MENU
+
+======================= */
+
+nav{
+
+position:sticky;
+
+top:0;
+
+background:rgba(255,255,255,.9);
+
+backdrop-filter:blur(10px);
+
+padding:18px;
+
+text-align:center;
+
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+z-index:1000;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+margin:0 18px;
+
+font-size:18px;
+
+font-weight:600;
+
+color:#666;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#ff4f94;
+
+}
+
+/* =======================
+
+TITLE
+
+======================= */
+
+.title{
+
+text-align:center;
+
+padding:60px 20px 30px;
+
+}
+
+.title h1{
+
+font-size:52px;
+
+color:#ff4f94;
+
+margin-bottom:10px;
+
+}
+
+.title p{
+
+font-size:20px;
+
+color:#777;
+
+}
+
+.line{
+
+width:150px;
+
+height:5px;
+
+background:#ff7db5;
+
+margin:20px auto;
+
+border-radius:30px;
+
+}
+  /* =======================
+   GALLERY
+======================= */
+
+.gallery{
+
+max-width:1200px;
+
+margin:auto;
+
+padding:20px;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+
+gap:30px;
+
+}
+
+/* =======================
+   CARD
+======================= */
+
+.card{
+
+background:rgba(255,255,255,.9);
+
+backdrop-filter:blur(10px);
+
+border-radius:25px;
+
+overflow:hidden;
+
+box-shadow:0 12px 30px rgba(255,105,180,.15);
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 40px rgba(255,105,180,.28);
+
+}
+
+.card img{
+
+width:100%;
+
+height:250px;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+.content{
+
+padding:25px;
+
+}
+
+.content h2{
+
+color:#ff4f94;
+
+font-size:24px;
+
+margin-bottom:15px;
+
+}
+
+.content p{
+
+font-size:17px;
+
+line-height:30px;
+
+color:#555;
+
+}
+
+/* =======================
+   BUTTON
+======================= */
+
+.button-group{
+
+max-width:1200px;
+
+margin:50px auto;
+
+display:flex;
+
+gap:20px;
+
+padding:0 20px;
+
+}
+
+.button{
+
+flex:1;
+
+text-align:center;
+
+padding:18px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-size:20px;
+
+font-weight:bold;
+
+color:white;
+
+transition:.3s;
+
+}
+
+.prev{
+
+background:#ff9ac5;
+
+}
+
+.next{
+
+background:#ff4f94;
+
+}
+
+.button:hover{
+
+transform:translateY(-5px);
+
+}
+
+/* =======================
+   FOOTER
+======================= */
 
 footer{
-margin-top:60px;
-background:#ff9cc4;
-padding:20px;
+
+margin-top:40px;
+
+padding:30px;
+
 text-align:center;
+
+background:#ff9cc4;
+
 color:white;
-font-size:18px;
+
 }
 
-</style>
+footer h2{
+
+margin-bottom:10px;
+
+}
+
+@media(max-width:768px){
+
+.button-group{
+
+flex-direction:column;
+
+}
+
+.title h1{
+
+font-size:40px;
+
+}
+
+}
+  </style>
+
 </head>
+
 <body>
-  <div class="snow n1"></div>
+
+<!-- หิมะ -->
+
+<div class="snow n1"></div>
 <div class="snow n2"></div>
 <div class="snow n3"></div>
 <div class="snow n4"></div>
 <div class="snow n5"></div>
 <div class="snow n6"></div>
 <div class="snow n7"></div>
+
+<!-- ซากุระ -->
 
 <span class="sakura s1">🌸</span>
 <span class="sakura s2">🌸</span>
@@ -209,23 +433,32 @@ font-size:18px;
 <span class="sakura s6">🌸</span>
 <span class="sakura s7">🌸</span>
 
+<!-- เมนู -->
+
 <nav>
 
-<a href="index.html">Home</a>
-<a href="profile.html">Profile</a>
-<a href="education.html">Education</a>
-<a href="award.html">Awards</a>
-<a href="contact.html">Contact</a>
+<a href="index.html">🏠 Home</a>
+
+<a href="profile.html">👤 Profile</a>
+
+<a href="education.html">🎓 Education</a>
+
+<a href="award.html">🏆 Awards</a>
+
+<a href="contact.html">📞 Contact</a>
 
 </nav>
+
+<!-- หัวข้อ -->
 
 <div class="title">
 
 <h1>🏆 Awards & Achievements</h1>
 
 <p>
-รวมเกียรติบัตร ผลงาน และความภาคภูมิใจ
-ตลอดการศึกษา
+
+รวมเกียรติบัตร ผลงาน และความภาคภูมิใจตลอดการศึกษา
+
 </p>
 
 <div class="line"></div>
@@ -233,8 +466,9 @@ font-size:18px;
 </div>
 
 <div class="gallery">
-
+  <!-- ========================= -->
 <!-- เกียรติบัตร 1 -->
+<!-- ========================= -->
 
 <div class="card">
 
@@ -247,8 +481,9 @@ font-size:18px;
 <p>
 
 ผ่านการอบรมหลักสูตรออนไลน์
-ภาษาอังกฤษเพื่อการสื่อสารสากล
-(English for Global Communication)
+<b>English for Global Communication</b>
+เพื่อพัฒนาทักษะภาษาอังกฤษสำหรับการสื่อสาร
+และการนำไปประยุกต์ใช้ในชีวิตประจำวัน
 
 <br><br>
 
@@ -260,7 +495,9 @@ font-size:18px;
 
 </div>
 
+<!-- ========================= -->
 <!-- เกียรติบัตร 2 -->
+<!-- ========================= -->
 
 <div class="card">
 
@@ -272,11 +509,12 @@ font-size:18px;
 
 <p>
 
-ได้รับเกียรติเป็นผู้นำในการจัดกิจกรรม
-STEAM DAY CAMP
+เข้าร่วมและมีส่วนร่วมในการจัดกิจกรรม
+<b>STEAM DAY CAMP</b>
 เพื่อส่งเสริมการเรียนรู้ด้านวิทยาศาสตร์
-เทคโนโลยี วิศวกรรมศาสตร์
-ศิลปะ และคณิตศาสตร์
+เทคโนโลยี วิศวกรรมศาสตร์ ศิลปะ
+และคณิตศาสตร์ พร้อมฝึกการทำงานเป็นทีม
+และการวางแผนกิจกรรม
 
 <br><br>
 
@@ -288,7 +526,9 @@ STEAM DAY CAMP
 
 </div>
 
+<!-- ========================= -->
 <!-- เกียรติบัตร 3 -->
+<!-- ========================= -->
 
 <div class="card">
 
@@ -301,11 +541,10 @@ STEAM DAY CAMP
 <p>
 
 ได้รับประกาศเกียรติคุณ
-รางวัลดาวจรัสแสง ประจำปีการศึกษา 2568
+<b>รางวัลดาวจรัสแสง</b>
 
-<br><br>
-
-สำหรับนักเรียนที่มีผลการเรียนดีเด่น
+จากผลการเรียนดีเด่น
+ประจำปีการศึกษา 2568
 ระดับชั้นมัธยมศึกษาปีที่ 5/1
 
 <br><br>
@@ -317,7 +556,9 @@ STEAM DAY CAMP
 </div>
 
 </div>
+  <!-- ========================= -->
 <!-- ผลงาน 1 -->
+<!-- ========================= -->
 
 <div class="card">
 
@@ -325,17 +566,34 @@ STEAM DAY CAMP
 
 <div class="content">
 
-<h2>📸 ผลงาน 1</h2>
+<h2>📸 กิจกรรมจิตอาสา</h2>
 
 <p>
-ปี พ.ศ. 2568
+
+เข้าร่วมกิจกรรมจิตอาสาของโรงเรียน
+โดยร่วมปฏิบัติหน้าที่ด้วยความรับผิดชอบ
+มีระเบียบวินัย และให้ความร่วมมือกับคณะครู
+รวมถึงเพื่อนนักเรียนในการดำเนินกิจกรรมต่าง ๆ
+
+<br><br>
+
+กิจกรรมนี้ช่วยพัฒนาทักษะด้านการทำงานเป็นทีม
+ความเสียสละ การตรงต่อเวลา
+และการมีจิตสาธารณะ
+
+<br><br>
+
+📅 ปีการศึกษา 2568
+
 </p>
 
 </div>
 
 </div>
 
+<!-- ========================= -->
 <!-- ผลงาน 2 -->
+<!-- ========================= -->
 
 <div class="card">
 
@@ -343,10 +601,26 @@ STEAM DAY CAMP
 
 <div class="content">
 
-<h2>🌟 ผลงาน 2</h2>
+<h2>🌟 กิจกรรมพัฒนาภาวะผู้นำ</h2>
 
 <p>
-ปี พ.ศ. 2569
+
+เข้าร่วมกิจกรรมของโรงเรียน
+เพื่อพัฒนาความเป็นผู้นำ
+ฝึกการทำงานร่วมกับผู้อื่น
+และการรับผิดชอบต่อหน้าที่ที่ได้รับมอบหมาย
+
+<br><br>
+
+จากการเข้าร่วมกิจกรรม
+ทำให้ได้เรียนรู้การวางแผน
+การแก้ไขปัญหาเฉพาะหน้า
+และการสื่อสารที่มีประสิทธิภาพ
+
+<br><br>
+
+📅 ปีการศึกษา 2568
+
 </p>
 
 </div>
@@ -354,46 +628,33 @@ STEAM DAY CAMP
 </div>
 
 </div>
+  <div class="button-group">
+
+<a href="education.html" class="button prev">
+⬅ Previous
+</a>
+
+<a href="contact.html" class="button next">
+Next ➜
+</a>
+
+</div>
 
 <footer>
 
 <h2>💖 Thank You For Visiting 💖</h2>
 
-<p>UBONWAN PRASANPUANG</p>
+<p style="margin-top:10px;">
+UBONWAN PRASANPHUANG
+</p>
 
-<p>Faculty of Nursing • Khon Kaen University</p>
-<div style="max-width:1200px;margin:50px auto;display:flex;gap:20px;padding:0 20px;">
+<p>
+Faculty of Nursing • Khon Kaen University
+</p>
 
-<a href="education.html"
-style="
-flex:1;
-text-align:center;
-padding:18px;
-background:#ff9ac5;
-color:white;
-text-decoration:none;
-border-radius:50px;
-font-size:20px;
-font-weight:bold;">
-⬅ Previous
-</a>
-
-<a href="contact.html"
-style="
-flex:1;
-text-align:center;
-padding:18px;
-background:#ff4f94;
-color:white;
-text-decoration:none;
-border-radius:50px;
-font-size:20px;
-font-weight:bold;">
-Next ➜
-</a>
-
-</div>
 </footer>
 
 </body>
+
 </html>
+  
